@@ -61,8 +61,13 @@ function addCard(card) {
 
 // Lock the cards in the open position
 function showMatch(card1, card2) {
-    card1.classList.add('match');
-    card2.classList.add('match');
+    card1.classList.add('match', 'match-in');
+    card2.classList.add('match', 'match-in');
+
+    setTimeout(function() {
+        card1.classList.remove('match-in');
+        card2.classList.remove('match-in');
+    }, 300)
 }
 
 // Remove the cards from the list and hide the card's symbol
@@ -125,9 +130,9 @@ function incrementMoves() {
 // Initialize the board
 function init() {
     // Shuffle the list of cards using the provided 'shuffle' method below
-    // const iconsShuffled = shuffle(icons)
+    const iconsShuffled = shuffle(icons)
     // To debug only.
-    const iconsShuffled = icons;
+    // const iconsShuffled = icons;
 
     // Loop through each card:
     icons.forEach(function (icon) {
