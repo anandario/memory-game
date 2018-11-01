@@ -11,11 +11,12 @@
     <meta name="description" content="Ananda Rio memory game.">
     <meta name="theme-color" content="#02ccba">
     <!-- CSS -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -24,10 +25,10 @@
         <h1>Memory game</h1>
     </header>
 
-    <!-- Header end-->
+    <!-- Header end -->
 
     <!-- Section -->
-    <section >
+    <section>
         <div class="subtitle">
             <div class="score">
                 <ul class="stars">
@@ -35,39 +36,38 @@
                     <li><i class="far fa-star"></i></li>
                     <li><i class="far fa-star"></i></li>
                 </ul>
-                <p class="moves">2 moves</p>
+                <p class="moves"><span class="moves-span">2</span> moves</p>
             </div>
             <div class="restart">
-                <a href="#"><i class="fas fa-redo"></i></a>
+                <i class="fas fa-redo"></i>
             </div>
+            <div class="timer">Time: <span id="time">0</span> seconds</div>
+
         </div>
-     </section>
+    </section>
 
-        <!-- Section end -->
+    <!-- Section end -->
 
-        <!-- Main -->
+    <!-- Main -->
     <main class="container">
-        <ul class="cards">
-            <li class="card"><i class="fas fa-parachute-box"></i></li>
-            <li class="card"><i class="fas fa-fish"></i></li>
-            <li class="card match"><i class="fas fa-bicycle"></i></li>
-            <li class="card"><i class="fas fa-anchor"></i></li>
-            <li class="card"><i class="fas fa-glass-martini"></i></li>
-            <li class="card match"><i class="fas fa-bicycle"></i></li>
-            <li class="card"><i class="fas fa-globe-americas"></i></li>
-            <li class="card"><i class="fas fa-plane"></i></li>
-            <li class="card"><i class="fas fa-parachute-box"></i></li>
-            <li class="card"><i class="fas fa-umbrella-beach"></i></li>
-            <li class="card"><i class="fas fa-globe-americas"></i></li>
-            <li class="card"><i class="fas fa-umbrella-beach"></i></li>
-            <li class="card open show"><i class="fas fa-anchor"></i></li>
-            <li class="card"><i class="fas fa-plane"></i></li>
-            <li class="card"><i class="fas fa-fish"></i></li>
-            <li class="card"><i class="fas fa-glass-martini"></i></li>
-        </ul>
+        <ul class="cards"></ul>
     </main>
 
-    <!-- Main  end-->
+    <!-- Main end -->
+
+    <!-- Modal section -->
+    <div id="modal">
+        <div id="modal-content">
+            <i class="far fa-check-circle"></i>
+            <h2>Congratulations! You Won!</h2>
+            <p id="result">With <span id="moves-number">0</span> moves, <span id="seconds-number">0</span> seconds and
+                <span id="stars-info">0</span> stars.
+            </p>
+            <p>Wooooooo!</p>
+            <button id="play-again-button">Play again!</button>
+        </div>
+    </div>
+    <!-- Modal section end -->
 
     <!-- JavaScript -->
 
